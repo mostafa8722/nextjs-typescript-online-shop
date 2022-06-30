@@ -1,0 +1,262 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+
+
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+textarea:focus, input:focus,button:focus{
+	outline: none;
+}
+a{text-decoration: none}
+
+
+
+
+
+
+
+.dropdown:hover .dropdown-menu {
+	display: block;
+	margin-top: 0;
+  }
+  .dropdown-toggle:after {
+	display: none !important;
+  }
+  .navbar-mybutton:hover {
+	background-color: rgb(243, 76, 76) !important;
+  }
+  
+  @media only screen and (max-width: 700px) {
+	.design-pick-font {
+	  font-size: 15px;
+	}
+	.design-card-center {
+	  margin-left: 15px !important;
+	}
+  }
+  
+  .owl-carousel .owl-prev.disabled,
+  .owl-carousel .owl-next.disabled {
+	pointer-events: none;
+	opacity: 0;
+  }
+  
+  @media only screen and (min-width: 701px) {
+	#navBarSearchForm input[type="text"] {
+	  width: 400px !important;
+	}
+	#navBarSearchForm .input-group {
+	  margin-right: 50px;
+	}
+  }
+  .md-18 {
+	font-size: 20px;
+  }
+  .md-15 {
+	font-size: 15px;
+  }
+  @media only screen and (max-width: 1200px) {
+	.header {
+	  display: none;
+	}
+  }
+  @media only screen and (max-width: 1000px) {
+	.hider {
+	  display: none;
+	}
+  }
+  .hider {
+	color: black !important;
+  }
+  .hider:hover {
+	color: #b21f29 !important;
+  }
+  
+  .my-left {
+	background-color: rgba(178, 31, 41, 0.3);
+	color: white;
+	border-radius: 50%;
+	border: 2px solid gray;
+	font-size: 50px;
+	outline: none;
+  }
+  .my-right {
+	background-color: rgba(178, 31, 41, 0.3);
+	color: white;
+	border-radius: 50%;
+	border: 2px solid gray;
+	font-size: 50px;
+	outline: none;
+	transform: rotate(180deg);
+  }
+  
+  @media only screen and (max-width: 700px) {
+	.myfont {
+	  font-family: "Oswald", sans-serif;
+	  font-size: 20px;
+	}
+	.my-right {
+	  background-color: rgba(178, 31, 41, 0.3);
+	  color: white;
+	  border-radius: 50%;
+	  border: 2px solid gray;
+	  font-size: 20px;
+	  outline: none;
+	  transform: rotate(180deg);
+	}
+  
+	.my-center-style {
+	  margin-left: 20px !important;
+	}
+  
+	.my-left {
+	  background-color: rgba(178, 31, 41, 0.3);
+	  color: white;
+	  border-radius: 50%;
+	  border: 2px solid gray;
+	  font-size: 20px;
+	  outline: none;
+	}
+	.brand {
+	  width: 35% !important;
+	}
+  }
+  @media only screen and (min-width: 701px) {
+	.myfont {
+	  font-family: "Oswald", sans-serif;
+	}
+  }
+  
+  .dressfont {
+	font-family: "open-sans", sans-serif;
+  }
+  
+  .textfont {
+	font-family: "open sans", sans-serif;
+	color: #404040;
+  }
+  .footfont {
+	font-family: "open sans", sans-serif;
+  }
+  
+  .owl-carousel .owl-next {
+	position: absolute;
+	right: 0;
+	top: 50%;
+  }
+  .owl-carousel .owl-prev {
+	position: absolute;
+	left: 0;
+	top: 50%;
+  }
+  .footer-content a,
+  p {
+	text-decoration: none;
+	color: #a1a1a1;
+  }
+  .footer-content {
+	background-color: #333333;
+  }
+  .footer {
+	bottom: 0;
+	position: relative;
+	width: 100%;
+  }
+  .material-blue {
+	color: blue;
+  }
+  .footer-content .social-icons li {
+	display: inline-block;
+	margin: 0 2px;
+  }
+  .price {
+	color: red;
+  }
+  .originalprice {
+	color: gray;
+	text-decoration: line-through;
+  }
+  .discount {
+	font-weight: bold;
+  }
+  .carder:hover {
+	background-color: rgba(216, 216, 216, 0.2);
+  }
+  h4 {
+	display: flex;
+	flex-direction: row;
+  }
+  
+  h4:before,
+  h4:after {
+	content: " ";
+	flex: 1 1;
+	border-bottom: 1px solid rgba(219, 219, 219, 0.5);
+	margin: auto;
+  }
+  html,
+  body {
+	max-width: 100%;
+	overflow-x: hidden;
+  }
+  
+  .slide .my-next {
+	margin-right: -150px !important;
+  
+	transition: margin-right 0.5s;
+  }
+  .slide:hover .my-next {
+	margin-right: -10px !important;
+  }
+  
+  .slide .my-prev {
+	margin-left: -1500px !important;
+	overflow: hidden;
+	transition: margin-left 0.5s;
+  }
+  .slide:hover .my-prev {
+	margin-left: -10px !important;
+  }
+  

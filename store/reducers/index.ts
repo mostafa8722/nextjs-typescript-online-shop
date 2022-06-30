@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux'
 
-//import userReducer from './userReducer'
+import userReducer from './userReducer'
 //import cartState from '../interfaces/cartState'
 
 const reducer = combineReducers({
- // userReducer
+  userReducer
 })
 
 // const reducer = combineReducers<cartState>({

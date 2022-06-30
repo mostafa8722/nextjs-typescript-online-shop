@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Vazir Light';
+    src: url('../fonts/Vazir-Light.eot');
+    src: url('../fonts/Vazir-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Vazir-Light.woff') format('woff'),
+        url('../fonts/Vazir-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+   /*font-family: 'Vazir Medium'; */
+    font-family: 'Vazir';
+    src: url('../fonts/Vazir-Medium.eot');
+    src: url('../fonts/Vazir-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Vazir-Medium.woff') format('woff'),
+    url('../fonts/Vazir-Medium.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazir Bold';
+    src: url('../fonts/Vazir-Bold.eot');
+    src: url('../fonts/Vazir-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Vazir-Bold.woff') format('woff'),
+    url('../fonts/Vazir-Bold.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'vazir FaNum';
+    src: url('../fonts/Farsi-Digits/Vazir-Light-FD.eot');
+    src: url('../fonts/Farsi-Digits/Vazir-Light-FD.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Farsi-Digits/Vazir-Light-FD.woff') format('woff'),
+    url('../fonts/Farsi-Digits/Vazir-Light-FD.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
