@@ -1,4 +1,6 @@
+
 import Image from "next/Image";
+
 interface ImageProps { 
     src : string,
     alt ?: string,
@@ -19,7 +21,7 @@ interface ImageProps {
      aria-disabled={props.disabled}
       onClick={props.onClick}
       src={props.src}
-      alt={props.alt ? props.alt : "کومه گردی "}
+      alt={props.alt ? props.alt : "همیار شاپ "}
       quality={100}
       width={props.width}
       height={props.height}
