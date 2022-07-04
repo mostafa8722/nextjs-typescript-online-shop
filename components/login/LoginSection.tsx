@@ -3,7 +3,7 @@ import React from "react";
 import {styled} from "@mui/system"
 import CustomInput from "../../app/input/customInput";
 import CustomCheckBox from "../../app/input/customCheckBox";
-import {registerInput} from "../../logic/css/style";
+
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import Link from "next/link"; 
@@ -83,7 +83,8 @@ const customInputStyle= (width:number)=>{
     paddingRight:15,
     paddingLeft:15,
     fontSize:15,
-    margin :"0px auto"
+    margin :"0px auto",
+    
 }
 };
     const validationSchemaLoginInfo = yup.object({

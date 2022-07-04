@@ -50,7 +50,7 @@ const CustomInput = (props:any)=> {
             }}
             inputProps={{
                 maxLength:maxLength?maxLength:null,
-                style: inputStyle?inputStyle:{  paddingLeft:10,paddingRight:10 ,margin:"0px auto"}
+                style: inputStyle?inputStyle:{  paddingLeft:10,paddingRight:10 ,margin:"0px auto",width:"100%",flexGrow:1}
             }}
             value={formik.values[name]}
             onChange={handleChange?handleChange:formik.handleChange}

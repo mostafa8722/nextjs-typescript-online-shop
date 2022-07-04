@@ -7,6 +7,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import {Devices} from "../../logic/Theme"
 import { useTheme } from '@mui/material/styles';
 import ContainerTop  from "./header/containerTop";
+import ContainerSearch  from "./header/containerSearch";
 
 const HeaderEl = styled("div")(()=>`
  display :grid;
@@ -15,6 +16,7 @@ const HeaderEl = styled("div")(()=>`
  
   column-gap: 10px;
   row-gap: 10px;
+  
 `)
 
 const ItemEl = styled("div")(()=>`
@@ -25,19 +27,21 @@ const LaptopEl = styled('div')(()=>`
  display:flex;
  flex-direction:column;
  direction:rtl;
+ background-color:#ffffff;
 `);
 
 
 const ContainerTopEl = styled('div')(()=>`
  display:flex;
  flex-direction:row;
- height:35px;
+
  align-items:center;
 `);
 const ContainerSearchEl = styled('div')(()=>`
  display:flex;
  flex-direction:row;
- height:80px;
+
+
 `);
 const ContainerCategoryEl = styled('div')(()=>`
  display:flex;
@@ -67,7 +71,7 @@ const Header = ()=>{
         :
            <LaptopEl>
               <ContainerTopEl><ContainerTop/></ContainerTopEl>
-              <ContainerSearchEl/>
+              <ContainerSearchEl><ContainerSearch/></ContainerSearchEl>
               <ContainerCategoryEl/>
            
            </LaptopEl>
