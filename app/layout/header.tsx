@@ -8,6 +8,7 @@ import {Devices} from "../../logic/Theme"
 import { useTheme } from '@mui/material/styles';
 import ContainerTop  from "./header/containerTop";
 import ContainerSearch  from "./header/containerSearch";
+import ContainerCategory  from "./header/containerCategory";
 
 const HeaderEl = styled("div")(()=>`
  display :grid;
@@ -46,7 +47,7 @@ const ContainerSearchEl = styled('div')(()=>`
 const ContainerCategoryEl = styled('div')(()=>`
  display:flex;
  flex-direction:row;
- height:
+ height:50px;
 `);
 
 
@@ -72,7 +73,7 @@ const Header = ()=>{
            <LaptopEl>
               <ContainerTopEl><ContainerTop/></ContainerTopEl>
               <ContainerSearchEl><ContainerSearch/></ContainerSearchEl>
-              <ContainerCategoryEl/>
+              <ContainerCategoryEl><ContainerCategory/></ContainerCategoryEl>
            
            </LaptopEl>
 }

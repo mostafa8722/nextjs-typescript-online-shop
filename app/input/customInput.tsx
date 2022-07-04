@@ -7,7 +7,7 @@ import IconButton from "@mui/material/IconButton";
 const CustomInput = (props:any)=> {
     const {name,type,placeholder,
         formik,customStyle,inputStyle,
-        rightIcon,iconButton,
+        rightIcon,CustomIconButton,
         handleChange,
         maxLength,
         inputRef,
@@ -30,19 +30,15 @@ const CustomInput = (props:any)=> {
                 ),
                 endAdornment: (
                     <InputAdornment position="end">
-                        {iconButton ?
+                        {CustomIconButton  ?
                         <IconButton
                             aria-label="toggle password visibility"
                             onClick={handleClickShowPassword}
 
                             edge="end"
                         >
-                            {showPassword?
-
-                                <Image alt=""   width={25} height={25}  src="/images/hide_password.svg"     />
-                                :
-                                <Image alt=""   width={25} height={25}  src="/images/show_password.svg"      />
-                            }
+                       <CustomIconButton />
+                       
                         </IconButton>
                             : null }
                     </InputAdornment>
