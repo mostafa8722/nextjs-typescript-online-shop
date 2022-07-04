@@ -68,7 +68,6 @@ justify-content:center;
 const TextEl = styled('p')`
 font-size : 0.9rem;
 color:#878787;
-
 `
 
 
