@@ -1,4 +1,4 @@
-import LoginSection from "../../components/login/LoginSection";
+import LoginSection from "../../components/login/loginSection";
 import {CustomNextPage} from "../../logic/general" 
 
 
