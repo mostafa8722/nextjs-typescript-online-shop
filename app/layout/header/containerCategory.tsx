@@ -87,13 +87,59 @@ font-size: 0.8rem;
 
 const MenuLevel3 = styled("ul")(()=>`
  height:300px;
- background:#ff2200;
+ background:#ffffff;
+  padding:0.5rem 1rem;
  position:absolute;
  top:45px;
  right:0px;
  width:100%;
- display:flex;
+ display:grid;
+ grid-template-columns:repeat(4 ,1fr);
+ border-bottom-left-radius:0.6rem;
+ border-bottom-right-radius:0.6rem;
+ box-shadow : 1px 2px 1px 0px rgba(0,0,0,0.1)
 `);
+
+
+
+const MenuList3 =styled("li")(()=>`
+ display:flex;
+ flex-direction: column;
+ cursor:pointer;
+ }
+
+`);
+const ListItem3 =styled("a")(()=>`
+display:flex;
+`);
+const ListItemTitle3 =styled("span")(()=>`
+font-size: 0.9rem;
+font-weight:bold;
+color:#565656;
+`);
+
+const ChildMenuLevel3 = styled("ul")(()=>`
+ 
+ display:flex;
+ flex-direction: column;
+`);
+
+const ChildMenuList3 =styled("li")(()=>`
+ display:flex;
+ flex-direction: column;
+ cursor:pointer;
+ margin-top:0.5rem;
+ }
+
+`);
+const ChildListItem3 =styled("a")(()=>`
+display:flex;
+`);
+const ChildListItemTitle3 =styled("span")(()=>`
+font-size: 0.8rem;
+color:#565656;
+`);
+
 
 const ContainerSearch = ()=>{
   
@@ -103,17 +149,58 @@ const ContainerSearch = ()=>{
     const categories2:any = [
         
         {id:1,title:"کالای دیجیتال",icon:"down",categories:[
-            {id:5,title:"موبایل"},
-            {id:6,title:"دوربین"},
-            {id:7,title:"لپ تاپ"},
+            {id:5,title:"موبایل",categories:[
+              {id:10,title:"مانیتور",categories:[
+                {id:100,title:"مانتیور سامسونگ"},
+                {id:200,title:"مانتیور ال جی "},
+                {id:300,title:"مانتیور ایسوس"},
+              ]},
+              {id:20,title:"مادر برد",categories:[
+                {id:400,title:"مانتیور سامسونگ"},
+                {id:500,title:"مانتیور ال جی "},
+                {id:600,title:"مانتیور ایسوس"},
+              ]},
+              {id:30,title:"کارت گرافیک ",categories:[
+                {id:1,title:"مانتیور سامسونگ",categories:[]},
+                {id:2,title:"مانتیور ال جی ",categories:[]},
+                {id:3,title:"مانتیور ایسوس",categories:[]},
+              ]},
+              {id:40,title:"سی پی یو",categories:[
+                {id:1,title:"مانتیور سامسونگ",categories:[]},
+                {id:2,title:"مانتیور ال جی ",categories:[]},
+                {id:3,title:"مانتیور ایسوس",categories:[]},
+              ]}
+            ]},
+            {id:6,title:"دوربین",categories:[]},
+            {id:7,title:"لپ تاپ",categories:[]},
         ]},
-       {id:2,title: "مد و پوشاک",icon:"down",categories:[
-        {id:5,title:"موبایل"},
-        {id:6,title:"دوربین"},
-        {id:7,title:"لپ تاپ"},
+       {id:23,title: "مد و پوشاک",icon:"down",categories:[
+        {id:54,title:"موبایل",categories:[
+          {id:1,title:"مانیتور",categories:[
+            {id:1,title:"مانتیور سامسونگ"},
+            {id:2,title:"مانتیور ال جی "},
+            {id:3,title:"مانتیور ایسوس"},
+          ]},
+          {id:1,title:"مادر برد",categories:[
+            {id:1,title:"مانتیور سامسونگ"},
+            {id:2,title:"مانتیور ال جی "},
+            {id:3,title:"مانتیور ایسوس"},
+          ]},
+          {id:1,title:"کارت گرافیک ",categories:[
+            {id:1,title:"مانتیور سامسونگ",categories:[]},
+            {id:2,title:"مانتیور ال جی ",categories:[]},
+            {id:3,title:"مانتیور ایسوس",categories:[]},
+          ]},
+          {id:1,title:"مادربرد",categories:[
+            {id:1,title:"مانتیور سامسونگ",categories:[]},
+            {id:2,title:"مانتیور ال جی ",categories:[]},
+            {id:3,title:"مانتیور ایسوس",categories:[]},
+          ]}
+        ]},
+        
     ]},
-        {id:3,title:"آرایشی و بهداشتی", icon:"down",categories:[]},
-        {id:4,title:"ورزش و سفر",icon:"down",categories:[]}
+        {id:32,title:"آرایشی و بهداشتی", icon:"down",categories:[]},
+        {id:41,title:"ورزش و سفر",icon:"down",categories:[]}
     ];
     const [hoverMenuLevelId1, setHoverMenuLevelId1] = useState(0);
     const [hoverMenuLevelId2, setHoverMenuLevelId2] = useState(0);
@@ -157,7 +244,7 @@ const ContainerSearch = ()=>{
                         category.categories.map((item:any)=>
                           <MenuList2
                           
-                          key={category.id}
+                          key={item.id}
                           onMouseEnter={() =>setHoverMenuLevelId2(item.id)}
                           onMouseLeave={() => setHoverMenuLevelId2(0)}
                           >
@@ -166,7 +253,30 @@ const ContainerSearch = ()=>{
                            </ListItem2>
                                 {
                                 item.id==hoverMenuLevelId2?
-                               <MenuLevel3></MenuLevel3>
+                               <MenuLevel3>
+                                
+                                {
+                                item.categories.map((item_level3:any)=>
+                                   <MenuList3>
+                                      <ListItem3>
+                                   <ListItemTitle3>{item_level3.title}</ListItemTitle3>
+                                    </ListItem3>
+                                    <ChildMenuLevel3>
+                                    {item_level3.categories.map((child_item:any)=>
+                                    <ChildMenuList3>
+                                    <ChildListItem3>
+                                 <ChildListItemTitle3>{child_item.title}</ChildListItemTitle3>
+                                  </ChildListItem3>
+                                
+                                 </ChildMenuList3>
+                                    )}
+                                    </ChildMenuLevel3>
+                                   </MenuList3>
+                                   
+                                  
+                                )
+                                }
+                               </MenuLevel3>
                                    :
                                <></>
                                   }
