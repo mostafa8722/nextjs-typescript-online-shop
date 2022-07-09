@@ -60,6 +60,7 @@ const MenuLevel2 = styled("ul")(()=>`
  right:0px;
  width:100%;
  display:flex;
+ z-index:2;
 `);
 
 const MenuList2 =styled("li")(()=>`
@@ -93,11 +94,13 @@ const MenuLevel3 = styled("ul")(()=>`
  top:45px;
  right:0px;
  width:100%;
+ z-index:2;
  display:grid;
  grid-template-columns:repeat(4 ,1fr);
  border-bottom-left-radius:0.6rem;
  border-bottom-right-radius:0.6rem;
- box-shadow : 1px 2px 1px 0px rgba(0,0,0,0.1)
+ box-shadow : 1px 2px 1px 0px rgba(0,0,0,0.1);
+
 `);
 
 

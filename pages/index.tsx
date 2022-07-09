@@ -1,12 +1,10 @@
 import {CustomNextPage} from "../logic/general" 
 import CustomLayout from "../containers/CustomLayout"
-
+import HomeContainer from "../components/home/homeContainer";
 const HomePage:CustomNextPage = ()=>{
     return (
         <>
-        <h1 className="flex">
-      Hello world!
-    </h1>
+          <HomeContainer/>
         </>
     );
 }

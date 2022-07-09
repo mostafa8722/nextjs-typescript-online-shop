@@ -16,17 +16,17 @@ interface ImageProps {
  const CustomImageViewer = (props:ImageProps)=>{
 
     return (
-     <Image
+     <img
      className={props.className}
      aria-disabled={props.disabled}
       onClick={props.onClick}
       src={props.src}
       alt={props.alt ? props.alt : "همیار شاپ "}
-      quality={100}
+     /* quality={100}*/
       width={props.width}
       height={props.height}
-      layout={props.layout}
-      objectFit={props.objectFit}
+      /*layout={props.layout}*/
+     /* objectFit={props.objectFit}*/
      
      />
   
