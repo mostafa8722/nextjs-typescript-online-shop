@@ -62,7 +62,7 @@ const Sliders = ()=>{
             color: "#494949"
         }
     })
-      const classes = useStyles();
+     // const classes = useStyles();
     const lists = [
        
          {src:"/images/slider.jpg",title:"تهران ",id:1},
@@ -123,7 +123,7 @@ const Sliders = ()=>{
         >
 
                       {
-                            lists.map((list,index)=><Slider key={index} title={list.title}  src={list.src} id={list.id} />)
+                            lists.map((list,index)=><Slider key={list.id} title={list.title}  src={list.src} id={list.id} />)
                         }
               
             
