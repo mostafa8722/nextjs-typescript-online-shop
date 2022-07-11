@@ -3,7 +3,7 @@ import Footer from "../app/layout/footer"
 import Header from "../app/layout/header"
 
 
-const DefaultLayout = (props:any)=>{
+const CustomLayout = (props:any)=>{
     return (
         <>
          { <Header />  } 
@@ -13,4 +13,4 @@ const DefaultLayout = (props:any)=>{
         </>
     );
 }
-export default DefaultLayout;
+export default CustomLayout;
