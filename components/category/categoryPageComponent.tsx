@@ -11,8 +11,11 @@ margin:1rem 1rem;
 `)
 
 const   CategoryTitleEl = styled("div")(()=>`
-diplay:flex;
+display:flex;
 flex-direction:row;
+align-items:center;
+direction:rtl;
+margin-bottom:1rem;
 `)
 
 const   CategoryTitleTextEl = styled("span")(()=>`
@@ -22,6 +25,8 @@ font-size:0.8rem;
 const   CategoryTitleIconEl = styled(FaAngleLeft)(()=>`
 color:#676767;
 font-size:0.8rem;
+margin-left:0.3rem;
+margin-right:0.3rem;
 `)
 const   CategorySectionEl = styled("div")(()=>`
 display:grid;
