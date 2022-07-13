@@ -56,7 +56,7 @@ const ProductSection2 = ()=>{
            <TabSectionsEl>
                {
                 items.map((item,index)=>
-                <TabItemEl onClick={()=>setSelectedTab(index)} isActive={index==selectedTab}>
+                <TabItemEl key={index} onClick={()=>setSelectedTab(index)} isActive={index==selectedTab}>
                  <TabTitleEl> {item} </TabTitleEl>
                 </TabItemEl>
                 )
