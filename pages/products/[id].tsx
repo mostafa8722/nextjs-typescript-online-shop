@@ -2,7 +2,7 @@ import ProductPageComponents from "../../components/products/productPageComponen
 
 const ProductPage = ()=>{
     return(<>
-    <ProductPageComponents />
+     <ProductPageComponents />
     </>)
 }
 export default ProductPage;
