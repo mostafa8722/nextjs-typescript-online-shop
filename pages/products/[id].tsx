@@ -1,4 +1,4 @@
-import ProductPageComponents from "../../components/products/ProductPageComponent";
+import ProductPageComponents from "../../components/products/productPageComponent";
 
 const ProductPage = ()=>{
     return(<>

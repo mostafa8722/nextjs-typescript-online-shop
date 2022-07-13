@@ -95,7 +95,7 @@ margin-bottom:1rem;
 
 const Product = (props:Props)=>{
     const {id,title,image,price,discount} = props;
-    const formatPrice = (proce:number)=>  Number(price).toLocaleString()+" "+"تومان";
+    const formatPrice = (price:number)=>  Number(price).toLocaleString()+" "+"تومان";
 
     return (
 

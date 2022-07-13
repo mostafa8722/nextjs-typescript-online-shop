@@ -22,3 +22,25 @@ a {
 * {
   box-sizing: border-box;
 }
+.left-1{
+  left: 0%!important;
+  width: 60%!important;
+  height: 500px!important;
+  background-color: rgb(36, 201, 102);
+  
+}
+.mn{
+  height: 300px!important;
+  width: 400px!important;
+}
+.ttr{
+  position: static!important;
+  height: 400px!important;
+  width: 200px!important;
+  background-color: rgb(240, 240, 48);
+}
+.mn2{
+  width: "60%"!important;
+  right:  0px !important;;
+  background-color: aqua;
+}
