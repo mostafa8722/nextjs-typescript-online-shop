@@ -1,6 +1,7 @@
 import { styled } from "@mui/system";
 import HeaderSubCategory from "../../app/headerSubCategory";
 import ProductSection1 from "./productSection1";
+import ProductSection2 from "./productSection2";
 
 
 const   BodyPageEl = styled("div")(()=>`
@@ -16,6 +17,7 @@ const ProductPageComponents = ()=>{
         <BodyPageEl>
             <HeaderSubCategory/>
             <ProductSection1 />
+            <ProductSection2 />
       
              
         </BodyPageEl>

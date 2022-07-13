@@ -16,6 +16,7 @@ box-shadow:0.1rem 0.2rem 0.1rem 0rem rgba(0,0,0,0.1);
 
 direction:rtl;
 position:relative;
+margin-bottom:1rem;
 `)
 
 const ImageContainerEl = styled("div")(()=>`
