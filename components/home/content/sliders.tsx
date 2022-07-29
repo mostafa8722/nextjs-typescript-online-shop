@@ -27,7 +27,7 @@ const lists:Arr[] = [
     {link:"/images/product.jpg",src:"/images/product2.jpg",title:"موبایل نوکیا مدل جدید",id:1,price:"2000000",discount:10,},
   
   
-]
+];
 /*const Scroll = dynamic(
     () => import('./owlCarousel'),
     { ssr: false }

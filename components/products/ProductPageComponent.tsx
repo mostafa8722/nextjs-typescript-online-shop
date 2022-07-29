@@ -2,6 +2,7 @@ import { styled } from "@mui/system";
 import HeaderSubCategory from "../../app/headerSubCategory";
 import ProductSection1 from "./productSection1";
 import ProductSection2 from "./productSection2";
+import ProductSection from "../home/content/productsSection";
 
 
 const   BodyPageEl = styled("div")(()=>`
@@ -18,7 +19,7 @@ const ProductPageComponents = ()=>{
             <HeaderSubCategory/>
             <ProductSection1 />
             <ProductSection2 />
-      
+            <ProductSection title=" محصولات مشابه" />  
              
         </BodyPageEl>
         
