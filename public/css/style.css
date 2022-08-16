@@ -1,9 +1,10 @@
 @import "./font.css";
 body{
-    font-family: vazir FaNum;
+    font-family: vazir FaNum!important;;
     direction: rtl;
     background: #eeeeee;
 }
+div{    font-family: vazir FaNum!important;}
 
 .footer-section{
     background: #aaaaaa;

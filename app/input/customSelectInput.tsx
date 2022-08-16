@@ -9,7 +9,7 @@ import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 
 const CustomSelectInput = (props:any)=> {
-    const {name,formik,style,items,id,handleChange,value,label} =props
+    const {name,formik,customStyle,items,id,handleChange,value,label} =props
 
 
 
@@ -21,7 +21,7 @@ const CustomSelectInput = (props:any)=> {
                     }}
             variant="standard"
             InputProps={{
-                style: style,
+                style: customStyle,
                 disableUnderline: true,
             }}
             InputLabelProps={{shrink: false}}
@@ -29,24 +29,18 @@ const CustomSelectInput = (props:any)=> {
             id={id}
             name={name}
             value={value}
-        
+            
+            error={formik?(formik.touched[name] && Boolean(props.formik.errors[name])):null}
+            helperText={formik?(props.formik.touched[name] && props.formik.errors[name]):null}
+
         >
-             <RadioGroup
-    aria-labelledby="demo-radio-buttons-group-label"
-    defaultValue="female"
-    name="radio-buttons-group"
-  >
-  
-  
-  </RadioGroup>
-            <MenuItem disabled value="0">{label}</MenuItem>
-            <MenuItem value={10}>
-            <FormControlLabel value="female" control={<Radio />} label="Female" />
-            </MenuItem>
-    <MenuItem value={20}>
-    <FormControlLabel value="female2" control={<Radio />} label="Female2" />
-    </MenuItem>
-    <MenuItem value={30}>Thirty</MenuItem>
+         
+    {
+        items.map((item:any)=> <MenuItem key={item.id} value={item.id}><span style={{width:'100%',textAlign:"right"}}>{item.title}</span></MenuItem>)
+    }
+
+
+    
         </TextField>
 
     );

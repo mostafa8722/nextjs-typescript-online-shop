@@ -74,14 +74,14 @@ cursor:pointer;
 const SideBar = ()=>{
  const [itemActive,setItemActive] = useState(0)
     const items = [
-        {id:1,title:"کاربران ",addLink:"/admin/users/add",link:"/admin/users"},
-        {id:2,title:"دسته بندی ها ",addLink:"/admin/categories/add",link:"/admin/categories"},
-        {id:3,title:"نقش ها",addLink:"/admin/roles/add",link:"/admin/roles"},
-        {id:4,title:"دسترسی ها ",addLink:"/admin/permissions/add",link:"/admin/permissions"},
-        {id:5,title:"محصولات",addLink:"/admin/products/add",link:"/admin/products"},
-        {id:6,title:"ویژگی های محصولات",addLink:"/admin/products/features/add",link:"/admin/products/features"},
-        {id:7,title:"جزئیات محصولات",addLink:"/admin/products/detail/add",link:"/admin/products/details"},
-        {id:8,title:"تنظیمات",addLink:"/admin/settings/add",link:"/admin/settings"},
+        {id:1,title:"کاربران ",addLink:"/hamyar-web/admin/users/add",link:"/admin/users"},
+        {id:2,title:"دسته بندی ها ",addLink:"/hamyar-web/admin/categories/add",link:"/admin/categories"},
+        {id:3,title:"نقش ها",addLink:"/hamyar-web/admin/roles/add",link:"/admin/roles"},
+        {id:4,title:"دسترسی ها ",addLink:"/hamyar-web/admin/permissions/add",link:"/admin/permissions"},
+        {id:5,title:"محصولات",addLink:"/hamyar-web/admin/products/add",link:"/admin/products"},
+        {id:6,title:"ویژگی های محصولات",addLink:"/hamyar-web/admin/products/features/add",link:"/admin/products/features"},
+        {id:7,title:"جزئیات محصولات",addLink:"/hamyar-web/admin/products/detail/add",link:"/admin/products/details"},
+        {id:8,title:"تنظیمات",addLink:"/hamyar-web/admin/settings/add",link:"/admin/settings"},
     ];
    const handleOpenMenu = (id:number)=>{
     setItemActive(itemActive==0?id:0);

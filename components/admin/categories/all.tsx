@@ -1,5 +1,6 @@
 import { styled } from "@mui/system";
 import SideBar from "../sidebar";
+import EnhancedTable from "./table"
 
 
 
@@ -24,15 +25,18 @@ display:flex;
 flex-direction:column;
 overflow:hidden;
 
-height:300px;
+
 `)
+
 
 const CatPage = ()=>{
 
     return (
         <CatPageEl>
               <SideBar />
-             <ContentEl></ContentEl>
+             <ContentEl>
+                <EnhancedTable />
+             </ContentEl>
         </CatPageEl>
     );
 }
