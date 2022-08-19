@@ -1,18 +1,18 @@
-import actionType from '../../actionTypes/user'
-import userInfo from './userInfo';
+import {userActionType} from '../../actionTypes/actions'
+import {userInfo} from '../info';
 
 export namespace user {
 
     export interface Login {
-        type: actionType.USER_LOGIN;
+        type: userActionType.USER_LOGIN;
         payload: userInfo
     }
     export interface Register {
-        type: actionType.USER_REGISTER;
+        type: userActionType.USER_REGISTER;
         payload: userInfo
     }
     export interface GetUserInfo {
-        type: actionType.USER_INFO;
+        type: userActionType.USER_INFO;
         payload: userInfo
     }
 

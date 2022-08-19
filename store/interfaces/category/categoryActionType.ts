@@ -1,22 +1,15 @@
-import actionType from '../../actionTypes/user'
-import userInfo from '../user/userInfo';
+import {categoryActionType} from '../../actionTypes/actions'
+import { categoryInfo } from '../info'; 
 
-export namespace category {
+export namespace order {
 
     export interface add {
-        type: actionType.USER_LOGIN;
-        payload: userInfo
+        type: categoryActionType.ADD_CATEGORY;
+        payload: categoryInfo;
     }
-    export interface Register {
-        type: actionType.USER_REGISTER;
-        payload: userInfo
-    }
-    export interface GetUserInfo {
-        type: actionType.USER_INFO;
-        payload: userInfo
-    }
+  
 
 
 }
 
-export default category;
+export default order;

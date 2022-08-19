@@ -1,0 +1,47 @@
+
+export enum cartActionType {
+    ADD_CART = "ADD_CART",
+    DELETE ="DELETE_CART" ,
+    CARTS = "CARTS",
+    CART = "CART",
+    }
+
+
+    
+export enum categoryActionType {
+    ADD_CATEGORY  = "ADD_CATEGORY" ,
+    UPDATE_CATEGORY  = "UPDATE_CATEGORY" ,
+    DELETE_CATEGORY  = "DELETE_CATEGORY" ,
+    ADMIN_CATEGORIES  = "ADMIN_CATEGORIES" ,
+    USER_CATEGORIES  = "USER_CATEGORIES" ,
+}
+
+export enum commentActionType {
+    ADD_COMMENT="ADD_COMMENT",
+    DELETE_COMMENT="DELETE_COMMENT",
+    ADMIN_COMMENTS="ADMIN_COMMENTS",
+    USER_COMMENTS="USER_COMMENTS",
+}
+
+
+export enum orderActionType {
+    ADD_ORDER = "ADD_ORDER",
+    DELETE_ORDER = "DELETE_ORDER",
+    ADMIN_ORDERS = "ADMIN_ORDERS",
+    USER_ORDERS = "USER_ORDERS",
+}
+
+export enum productActionType {
+    ADD_PRODUCT = "ADD_PRODUCT",
+    UPDATE_PRODUCT = "UPDATE_PRODUCT",
+    DELETE_PRODUCT = "DELETE_PRODUCT",
+    ADMIN_PRODUCTS = "ADMIN_PRODUCTS",
+    USER_PRODUCTS = "USER_PRODUCTS",
+}
+
+export enum userActionType {
+    USER_LOGIN = "USER_LOGIN",
+    USER_REGISTER = "USER_REGISTER",
+    USER_INFO = "USER_INFO",
+    
+}

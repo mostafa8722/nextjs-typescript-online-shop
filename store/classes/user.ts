@@ -1,7 +1,7 @@
-import userInterface from '../interfaces/user/userState'
-import userInfo from "../interfaces/user/userInfo";
+import {userState} from '../interfaces/state'
+import {userInfo} from "../interfaces/info";
 
-class ClassUser implements userInterface {
+class ClassUser implements userState {
 
     user:  userInfo | {} ;
     isLoggedIn: boolean | false ;
@@ -18,7 +18,7 @@ class ClassUser implements userInterface {
     sheba:string | '';
 
   // constructor(cart: cartItem[] | [] , toatalPrice: number, deliveryPrice: number) {
-    constructor(state: userInterface) {
+    constructor(state: userState) {
 
         this.user = state.user;
         this.isLoggedIn = state.isLoggedIn ;

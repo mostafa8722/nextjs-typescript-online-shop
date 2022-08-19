@@ -1,22 +1,19 @@
-import actionType from '../../actionTypes/'
-import userInfo from './userInfo';
+import {productActionType} from '../../actionTypes/actions'
+import { productInfo } from '../info'; 
 
-export namespace user {
+export namespace product {
 
-    export interface Login {
-        type: actionType.USER_LOGIN;
-        payload: userInfo
+    export interface add {
+        type: productActionType.ADD_PRODUCT;
+        payload: productInfo
     }
-    export interface Register {
-        type: actionType.USER_REGISTER;
-        payload: userInfo
+    export interface update {
+        type: productActionType.UPDATE_PRODUCT;
+        payload: productInfo
     }
-    export interface GetUserInfo {
-        type: actionType.USER_INFO;
-        payload: userInfo
-    }
+  
 
 
 }
 
-export default user;
+export default product;
