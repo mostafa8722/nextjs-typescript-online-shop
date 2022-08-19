@@ -1,5 +1,5 @@
-import userInterface from '../interfaces/userState'
-import userInfo from "../interfaces/userInfo";
+import userInterface from '../interfaces/user/userState'
+import userInfo from "../interfaces/user/userInfo";
 
 class ClassUser implements userInterface {
 

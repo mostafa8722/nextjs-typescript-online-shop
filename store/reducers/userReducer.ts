@@ -1,6 +1,6 @@
 import actionType from "../actionTypes/user";
 import {Action}  from '../actionsEntity/user';
-import userType from "../interfaces/userState";
+import userType from "../interfaces/user/userState";
 import initialUser from "../initialStates/user";
 import ClassUser from "../classes/user";
 

@@ -1,5 +1,7 @@
-import Axios, { AxiosRequestConfig, AxiosResponse } from "axios";
+import  { AxiosRequestConfig, AxiosResponse } from "axios";
 //import { toast2 } from "react-toastify";
+import Axios from "./axiosConfig";
+
 
 export const StorageKey = "phocus_session";
 
@@ -22,8 +24,11 @@ export const fetcher = async (url: string) => {
 };
 
 export const get = (path: string, config?:AxiosRequestConfig, withPagination: boolean = false) => {
+  
+   // let path2 = ""+path
     const onSuccess = (response: AxiosResponse<any>) => {
-        // console.info("Get Request Successful!", response);
+         console.log("Get Request Successful!", response);
+       
         if (withPagination) {
             // with patgination
             return response.data;

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-export const BaseUrl = "localhost:8000/api/v1/";
+export const BaseUrl = "http://localhost:8000/api/v1/";
 
 //set base url for every req
 axios.defaults.baseURL = BaseUrl;
@@ -36,4 +36,5 @@ axios.interceptors.response.use(
     }
 );
 
+export default axios;
 //to use this config you just need to import this file instead of the axios library

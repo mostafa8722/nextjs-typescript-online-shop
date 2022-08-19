@@ -1,4 +1,4 @@
-import actionType from '../actionTypes/user'
+import actionType from '../../actionTypes/user'
 import userInfo from './userInfo';
 
 export namespace user {

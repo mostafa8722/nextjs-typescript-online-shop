@@ -12,6 +12,9 @@ import { validationCategory } from "../../../logic/validations/adminValidations"
 import { adminCategories } from "../../../api/admin/category";
 
 
+import Stack from '@mui/material/Stack';
+import CircularProgress from '@mui/material/CircularProgress';
+
 interface inputProps {
   size?:string,
   bg?:string,
@@ -222,7 +225,9 @@ const parents = ()=>{
                   <CustomFileUploadEl  />
                  </InputEl>
                  <ButtomDivEl>
-                   <ButtonEl  >ثبت</ButtonEl>
+                   <ButtonEl  >
+                    <CircularProgress color="#ffffff" />
+                   </ButtonEl>
                  </ButtomDivEl>
                 
                  </form>
