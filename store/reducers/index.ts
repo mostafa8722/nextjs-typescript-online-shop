@@ -6,6 +6,7 @@ import categoryReducer from './type/categoryReducer'
 import productReducer from './type/productReducer'
 import commentReducer from './type/commentReducer'
 import orderReducer from './type/orderReducer'
+import generalReducer from './type/generalReducer'
 
 
 const reducer = combineReducers({
@@ -14,7 +15,8 @@ const reducer = combineReducers({
   categoryReducer,
   productReducer,
   commentReducer,
-  orderReducer
+  orderReducer,
+  generalReducer
 })
 
 // const reducer = combineReducers<cartState>({

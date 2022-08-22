@@ -49,9 +49,9 @@ const CustomInput = (props:any)=> {
                 style: inputStyle?inputStyle:{  paddingLeft:10,paddingRight:10 ,margin:"0px auto",width:"100%",flexGrow:1}
             }}
             value={formik.values[name]}
-            onChange={handleChange?handleChange:formik.handleChange}
-            error={formik.touched[name] && Boolean(props.formik.errors[name])}
-            helperText={props.formik.touched[name] && props.formik.errors[name]}
+            onChange={handleChange}
+            error={formik.touched[name] && Boolean(formik.errors[name])}
+            helperText={formik.touched[name] && formik.errors[name]}
         />
     );
 }

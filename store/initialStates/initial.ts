@@ -1,85 +1,46 @@
 export const initialCartState = {
-    user : {},
-    isLoggedIn: false,
-    userId: '',
-    token: '',
-    refreshToken: '',
-    expiresOn: '',
-    data: '',
-    apiToken: '',
-    mobile:'',
-    email:'',
-    password:'',
-    bank:'',
-    sheba:'',
+    cart : {},
+
   };
 
   export const initialCategoryState = {
-    user : {},
-    isLoggedIn: false,
-    userId: '',
-    token: '',
-    refreshToken: '',
-    expiresOn: '',
-    data: '',
-    apiToken: '',
-    mobile:'',
-    email:'',
-    password:'',
-    bank:'',
-    sheba:'',
-  };
+    category : {},
+    categories : [],
+    categories2 : [],
+    categories3 : [],
+
+   
+  }
 
 
   export const initialCommentState = {
-    user : {},
-    isLoggedIn: false,
-    userId: '',
-    token: '',
-    refreshToken: '',
-    expiresOn: '',
-    data: '',
-    apiToken: '',
-    mobile:'',
-    email:'',
-    password:'',
-    bank:'',
-    sheba:'',
+    comment : {},
+   
   };
 
 
 
   export const initialOrderState = {
-    user : {},
-    isLoggedIn: false,
-    userId: '',
-    token: '',
-    refreshToken: '',
-    expiresOn: '',
-    data: '',
-    apiToken: '',
-    mobile:'',
-    email:'',
-    password:'',
-    bank:'',
-    sheba:'',
+    order : {},
+   
   };
 
   export const initialProductState = {
-    user : {},
-    isLoggedIn: false,
-    userId: '',
-    token: '',
-    refreshToken: '',
-    expiresOn: '',
-    data: '',
-    apiToken: '',
-    mobile:'',
-    email:'',
-    password:'',
-    bank:'',
-    sheba:'',
+    product : {},
+   
   };
+
+  export const initialGeneralState = {
+    isLoading : false,
+    isLoading2 : false,
+    isDataSuccess : false,
+    isLoadingPage : true,
+    showAlert :false,
+    alertMessage: "",
+    alertType:"success",
+   
+  };
+  
 
   export const initialUserState = {
     user : {},

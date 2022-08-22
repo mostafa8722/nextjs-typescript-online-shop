@@ -2,13 +2,15 @@ import * as React from 'react';
 import TextareaAutosize from '@mui/material/TextareaAutosize';
 
 const CustomTextArea = (props:any)=>{
-    const {placeholder,style} = props
+    const {placeholder,style,onChange,value} = props
     return (
-        <TextareaAutosize
+        <textarea
       aria-label="minimum height"
-      minRows={3}
+     
+      onChange={onChange}
       placeholder={placeholder}
       style={style}
+      value={value}
     />
     );
 }

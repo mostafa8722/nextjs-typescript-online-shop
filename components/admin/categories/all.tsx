@@ -2,6 +2,10 @@ import { styled } from "@mui/system";
 import SideBar from "../sidebar";
 import EnhancedTable from "./table"
 
+import { useEffect } from "react";
+
+import { useDispatch } from "react-redux";
+import { adminCategories } from "../../../api/admin/category";
 
 
 
@@ -31,6 +35,13 @@ overflow:hidden;
 
 const CatPage = ()=>{
 
+
+  const dispatch = useDispatch();
+  
+
+   useEffect(()=>{
+    adminCategories(dispatch);
+  },[]);
     return (
         <CatPageEl>
               <SideBar />

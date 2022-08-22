@@ -44,3 +44,11 @@ a {
   right:  0px !important;;
   background-color: aqua;
 }
+
+.css-1pxa9xg-MuiAlert-message{
+  margin: 0px 15px;
+  font-family: 'Vazir Light'!important;
+}
+.css-ki1hdl-MuiAlert-action{
+  padding:0px;
+}

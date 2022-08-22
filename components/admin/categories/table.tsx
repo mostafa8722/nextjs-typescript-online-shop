@@ -25,6 +25,7 @@ import {FaTrash} from "react-icons/fa"
 import {MdEdit} from "react-icons/md"
 import { styled } from '@mui/system';
 import Link from "next/link"
+import { useSelector } from 'react-redux';
 
 interface Data {
 
@@ -59,7 +60,7 @@ function createData(
   };
 }
 
-const rows = [
+const rows2 = [
   createData(1,1, "موبایل", "توضیحات", "", "",""),
   createData(2,2, "لپتاپ", "توضیحات", "", "",""),
  
@@ -260,7 +261,7 @@ cursor:pointer;
 const EnhancedTableToolbar = (props: EnhancedTableToolbarProps) => {
   const { numSelected } = props;
 
-
+ 
   return (
     <Toolbar
       sx={{
@@ -316,7 +317,8 @@ const EnhancedTable = ()=>{
     const [page, setPage] = React.useState(0);
     const [dense, setDense] = React.useState(false);
     const [rowsPerPage, setRowsPerPage] = React.useState(5);
-  
+    const rows = useSelector((state:any) => state.categoryReducer.categories.map((item:any,index:number)=>createData(item.id,index+1,item.title,item.body,item.image,item.parent,"")));
+
    
   
     const handleRequestSort = (
@@ -399,14 +401,14 @@ const EnhancedTable = ()=>{
                 rows.slice().sort(getComparator(order, orderBy)) */}
                 {stableSort(rows, getComparator(order, orderBy))
                   .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                  .map((row, index) => {
+                  .map((row:any, index:number) => {
                     const isItemSelected = isSelected(row.title);
                     const labelId = `enhanced-table-checkbox-${index}`;
   
                     return (
                       <TableRow
                         hover
-                        onClick={(event) => handleClick(event, row.title)}
+                     
                         role="checkbox"
                         aria-checked={isItemSelected}
                         tabIndex={-1}
@@ -415,6 +417,7 @@ const EnhancedTable = ()=>{
                       >
                         <TableCell padding="checkbox">
                           <Checkbox
+                             onClick={(event) => handleClick(event, row.title)}
                             color="primary"
                             checked={isItemSelected}
                             inputProps={{

@@ -44,10 +44,12 @@ object-fit: cover;
 
 `)
 
-const CustomFileUpload = ()=>{
+const CustomFileUpload = (props:any)=>{
 
-    const [src,setSrc] = useState("");
+    const {handleEvent,handleSrc,src} = props;  
 
+
+  
     
 
     const   uploadFileIndex =(e:any)=> {
@@ -72,10 +74,11 @@ const CustomFileUpload = ()=>{
 
                     if(  src!=""){
                         //this.state.image_uploaded.push({src:e.target.result,filename:files_name})
-                        setSrc(src);
+                        handleSrc(src);
                         console.log(src);
                         console.log("a",src);
                         console.log("b",files_name);
+                        handleEvent(files_name)
 
                     }
 

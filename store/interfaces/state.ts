@@ -7,6 +7,9 @@ export interface cartState {
 
 export interface categoryState {
     category:  categoryInfo | {},
+    categories :categoryInfo[] | [] ,
+    categories2 :categoryInfo[] | [] ,
+    categories3 :categoryInfo[] | [] ,
 }
 
 

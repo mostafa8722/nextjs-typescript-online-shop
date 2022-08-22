@@ -29,7 +29,7 @@ const CustomSelectInput = (props:any)=> {
             id={id}
             name={name}
             value={value}
-            
+            onChange={handleChange}
             error={formik?(formik.touched[name] && Boolean(props.formik.errors[name])):null}
             helperText={formik?(props.formik.touched[name] && props.formik.errors[name]):null}
 

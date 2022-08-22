@@ -1,4 +1,14 @@
 
+
+    
+export enum actionType {
+   
+    LOADING  = "LOADING" ,
+    LOADING2  = "LOADING2" ,
+    IS_DATA_SUCCESS  = "IS_DATA_SUCCESS" ,
+    LOADING_PAGE  = "LOADING_PAGE" ,
+    ALERT_MESSAGE  = "ALERT_MESSAGE" ,
+}
 export enum cartActionType {
     ADD_CART = "ADD_CART",
     DELETE ="DELETE_CART" ,
@@ -13,7 +23,10 @@ export enum categoryActionType {
     UPDATE_CATEGORY  = "UPDATE_CATEGORY" ,
     DELETE_CATEGORY  = "DELETE_CATEGORY" ,
     ADMIN_CATEGORIES  = "ADMIN_CATEGORIES" ,
+    ADMIN_CATEGORIES2  = "ADMIN_CATEGORIES2" ,
+    ADMIN_CATEGORIES3  = "ADMIN_CATEGORIES3" ,
     USER_CATEGORIES  = "USER_CATEGORIES" ,
+    LOADING  = "LOADING" ,
 }
 
 export enum commentActionType {

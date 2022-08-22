@@ -29,6 +29,7 @@ export const get = (path: string, config?:AxiosRequestConfig, withPagination: bo
     const onSuccess = (response: AxiosResponse<any>) => {
          console.log("Get Request Successful!", response);
        
+         
         if (withPagination) {
             // with patgination
             return response.data;
@@ -89,8 +90,8 @@ export const delete_ = (path: string, params: AxiosRequestConfig["params"] = nul
         .catch(onError);
 };
 
-export function post(path2: string, data: any, params?: any) {
-    let path = "http://212.23.201.222:3000/api/"+path2
+export function post(path: string, data: any, params?: any) {
+  
     let headers = {
         "Content-Type": "application/json",
     };
