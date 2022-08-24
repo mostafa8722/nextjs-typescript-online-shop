@@ -13,3 +13,31 @@ export   const validationCategory= yup.object().shape({
         .required('عنوان انگلیسی الزامی  می باشد'),
 
 });
+
+export   const validationColor= yup.object().shape({
+    title: yup
+        .string()
+        .min(3, 'تعداد حروف وارد شده کمتر از حد مجاز می باشد ')
+        .max(50, 'تعداد حروف وارد شده بیش از حد مجاز می باشد ')
+        .required('عنوان الزامی  می باشد'),
+        value: yup
+        .string()
+        .min(3, 'تعداد حروف وارد شده کمتر از حد مجاز می باشد ')
+        .max(50, 'تعداد حروف وارد شده بیش از حد مجاز می باشد ')
+        .required('عنوان انگلیسی الزامی  می باشد'),
+
+});
+
+export   const validationRole= yup.object().shape({
+    title: yup
+        .string()
+        .min(3, 'تعداد حروف وارد شده کمتر از حد مجاز می باشد ')
+        .max(50, 'تعداد حروف وارد شده بیش از حد مجاز می باشد ')
+        .required('عنوان الزامی  می باشد'),
+        label: yup
+        .string()
+        .min(3, 'تعداد حروف وارد شده کمتر از حد مجاز می باشد ')
+        .max(50, 'تعداد حروف وارد شده بیش از حد مجاز می باشد ')
+        .required('عنوان انگلیسی الزامی  می باشد'),
+
+});

@@ -12,7 +12,7 @@ class categoryClass implements  categoryState{
         this.category = state.category;
         this.categories = state.categories ;
         this.categories2 = state.categories2 ;
-        this.categories3 = state.categories2 ;
+        this.categories3 = state.categories3 ;
     }
 
     add(cat : categoryInfo){
@@ -31,6 +31,10 @@ class categoryClass implements  categoryState{
        loadData3(cats: categoryInfo[]){
       
         this.categories3 =  cats;
+       }
+       loadCategory(cat: categoryInfo){
+      
+        this.category =  cat;
        }
     
     

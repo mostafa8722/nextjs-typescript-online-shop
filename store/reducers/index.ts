@@ -7,6 +7,10 @@ import productReducer from './type/productReducer'
 import commentReducer from './type/commentReducer'
 import orderReducer from './type/orderReducer'
 import generalReducer from './type/generalReducer'
+import colorReducer from './type/colorReducer'
+import permissionReducer from './type/permissionReducer'
+import sizeReducer from './type/sizeReducer'
+import roleReducer from './type/roleReducer'
 
 
 const reducer = combineReducers({
@@ -16,7 +20,11 @@ const reducer = combineReducers({
   productReducer,
   commentReducer,
   orderReducer,
-  generalReducer
+  generalReducer,
+  permissionReducer,
+  roleReducer,
+  sizeReducer,
+  colorReducer
 })
 
 // const reducer = combineReducers<cartState>({

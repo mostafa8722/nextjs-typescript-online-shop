@@ -98,11 +98,13 @@ const CustomFileUpload = (props:any)=>{
 
     return (
         <FileEl >
+            
             {
                 src?
                 <>
                  <ImageViewEl  src={src} /> 
-                 <FaTrashEl onClick={()=>setSrc("")} />
+                 
+                 <FaTrashEl onClick={()=>handleSrc("")} />
                 </>
                 :
                 <>

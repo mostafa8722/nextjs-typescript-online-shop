@@ -15,6 +15,29 @@ export const initialCartState = {
 
   export const initialCommentState = {
     comment : {},
+    comments :[],
+   
+  };
+  export const initialColorState = {
+    color : {},
+    colors:[],
+   
+  };
+  export const initialSizeState = {
+    size : {},
+    sizes:[],
+   
+  };
+
+  export const initialRoleState = {
+    role : {},
+    roles:[],
+   
+  };
+
+  export const initialPermissionState = {
+    permission : {},
+    permissions:[],
    
   };
 
@@ -22,11 +45,29 @@ export const initialCartState = {
 
   export const initialOrderState = {
     order : {},
+    orders : [],
    
   };
 
   export const initialProductState = {
     product : {},
+    products : [],
+   
+  };
+  export const initialProductDetailState = {
+    detail : {},
+    details : [],
+   
+  };
+  export const initialProductFeatureState = {
+    feature : {},
+    features : [],
+   
+  };
+
+  export const initialBannerState = {
+    banner : {},
+    banners : [],
    
   };
 

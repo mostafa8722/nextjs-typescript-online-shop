@@ -124,7 +124,7 @@ export function post(path: string, data: any, params?: any) {
         .catch(onError);
 }
 
-export function put(path: string, data: any, headers = { "Content-Type": "application/json" }, params?: any) {
+export function put(path: string, data: any, headers = { "Content-Type": "multipart/form-data" }, params?: any) {
     const onSuccess = (response: AxiosResponse<any>) => {
         // console.error("Post Request Successful!", response);
         return response.data;
@@ -145,6 +145,7 @@ export function put(path: string, data: any, headers = { "Content-Type": "applic
         return Promise.reject(error.response || error.message);
     };
 
+    console.log("ttt",data)
     return Axios.put(path, data, {
         headers,
         params,

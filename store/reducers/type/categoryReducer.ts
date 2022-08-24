@@ -30,6 +30,11 @@ const categoryReducer = (state:categoryState=initialCategoryState,action :Action
                return tempCategory;
                break;
 
+               case categoryActionType.CATEGORY:
+                tempCategory.loadCategory(action.payload)
+                 return tempCategory;
+                 break;
+
            
 
       

@@ -1,7 +1,7 @@
 import {categoryActionType} from '../../actionTypes/actions'
 import { categoryInfo } from '../info'; 
 
-export namespace order {
+export namespace category {
 
     export interface add {
         type: categoryActionType.ADD_CATEGORY;
@@ -23,7 +23,11 @@ export namespace order {
         payload: categoryInfo[];
     }
 
+    export interface loadCategory {
+        type: categoryActionType.CATEGORY;
+        payload: categoryInfo;
+    }
 
 }
 
-export default order;
+export default category;

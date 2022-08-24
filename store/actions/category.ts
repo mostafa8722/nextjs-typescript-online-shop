@@ -22,3 +22,10 @@ export const add = (payload: categoryInfo): category.add => {
   }
 
   
+  export const loadCategory = (payload: categoryInfo): category.loadCategory => {
+
+    return { type: categoryActionType.CATEGORY , payload }
+  }
+
+  
+  
