@@ -154,6 +154,25 @@ export interface productInfo  {
     product: productInfo,
     category: categoryInfo,
     
-   
+   }
 
-}
+   export interface brandInfo  {
+    id:number,
+    title: string, }
+
+    
+    export interface settingInfo  {
+      id:number,
+      phone: string,
+      mobile: string,
+      description: string,
+      index: string,
+      type: string,
+      value: string,
+      address: string,
+      twitter: string,
+      linkedin: string,
+      instagram: string,
+      youtube: string,
+      
+     }

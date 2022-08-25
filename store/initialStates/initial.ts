@@ -35,6 +35,20 @@ export const initialCartState = {
    
   };
 
+  export const initialSettingState = {
+    setting : {},
+    settings:[],
+   
+  };
+
+  export const initialBrandState = {
+    brand : {},
+    brands:[],
+   
+  };
+
+
+
   export const initialPermissionState = {
     permission : {},
     permissions:[],

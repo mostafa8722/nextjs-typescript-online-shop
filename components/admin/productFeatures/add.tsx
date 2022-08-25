@@ -7,8 +7,8 @@ import CustomInput from "../../../app/input/customInput";
 import CustomSelectInput from "../../../app/input/customSelectInput";
 
 
-import { validationColor } from "../../../logic/validations/adminValidations";
-import { adminColors,addColor,updateColor,adminColorRequest } from "../../../api/admin/color";
+import { validationProductFeature } from "../../../logic/validations/adminValidations";
+import { adminProductFeatures,addProductFeature,updateProductFeature,adminProductFeatureRequest } from "../../../api/admin/productFeature";
 
 
 import CircularProgress from '@mui/material/CircularProgress';
@@ -23,7 +23,7 @@ import { loadingPage } from "../../../store/actions/general";
 
 
 
-const ColorPageEl = styled("section")(()=>`
+const ProductFeaturePageEl = styled("section")(()=>`
 
   display:grid;
   grid-template-columns : 1fr 3fr;
@@ -104,21 +104,21 @@ font-weight:bold;
 
 
 
-const ColorPage = ()=>{
+const ProductFeaturePage = ()=>{
 
   const dispatch = useDispatch();
 
   const  isLoading = useSelector((state:any) => state.generalReducer.isLoading);
   const  isLoadingPage = useSelector((state:any) => state.generalReducer.isLoadingPage);
   const  isDataSuccess = useSelector((state:any) => state.generalReducer.isDataSuccess);
-  const  color= useSelector((state:any) => state.colorReducer.color);
-  const  colors= useSelector((state:any) => state.colorReducer.colors);
+  const  productFeature= useSelector((state:any) => state.productFeatureReducer.productFeature);
+  const  productFeatures= useSelector((state:any) => state.productFeatureReducer.productFeatures);
 
 
 
   const router = useRouter();
   const pathname = useRouter().pathname;
-  const path_type = useRouter().pathname=="/hamyar-web/admin/colors/add"?"add":"edit";
+  const path_type = useRouter().pathname=="/hamyar-web/admin/productFeatures/add"?"add":"edit";
 
   
 
@@ -137,7 +137,7 @@ const ColorPage = ()=>{
  
    dispatch(loadingPage(false))
     if(router.query.id)
-    adminColorRequest(dispatch,router.query.id)
+    adminProductFeatureRequest(dispatch,router.query.id)
       
    
   },[router.isReady])
@@ -152,8 +152,9 @@ const ColorPage = ()=>{
     enableReinitialize :true,
     initialValues: {
 
-        title: color?color.title:'',
-        value: color?color.value:'',
+        title: productFeature?productFeature.title:'',
+        label: productFeature?productFeature.label:'',
+        description: productFeature?productFeature.description:'',
        
         
        
@@ -161,7 +162,7 @@ const ColorPage = ()=>{
 
 
     },
-    validationSchema: validationColor,
+    validationSchema: validationProductFeature,
     onSubmit: (values,{ resetForm }) => {
 
     
@@ -169,14 +170,14 @@ const ColorPage = ()=>{
          let data:any = {
           id:router.query?router.query.id:0,
           title:values.title,
-          value:values.value,
+          value:values.label,
       
          }; 
          if(!isLoading){
           if(router.query.id)
-          updateColor(dispatch,data);
+          updateProductFeature(dispatch,data);
           else
-          addColor(dispatch,data);
+          addProductFeature(dispatch,data);
          }
         
 
@@ -212,7 +213,7 @@ const customStyleTextArea = ()=>{
 
  
     return (
-        <ColorPageEl>
+        <ProductFeaturePageEl>
               <SideBar />
                {
                 isLoadingPage?
@@ -221,13 +222,28 @@ const customStyleTextArea = ()=>{
                 <ContentEl>
                 <Title>
                   {
-                    path_type=="add"?"افزودن رنگ":"ویرایش رنگ"
+                    path_type=="add"?"افزودن ویژگی محصول":"ویرایش ویژگی محصول"
                   }
                   
                 </Title> 
 
 
                 <form  onSubmit={formik.handleSubmit} >
+
+                <InputEl >
+                 <InputLableEl>
+                   <InputLable> عنوان اصلی</InputLable>
+                   <InputLableNecessary>*</InputLableNecessary>
+                 </InputLableEl>
+                 <CustomInput 
+                   name="label"
+                   placeholder="عنوان اصلی  ...  "
+                   handleChange={formik.handleChange}
+                   customStyle={customInputStyle()} 
+                   formik={formik}
+                 />
+                </InputEl>
+
                 <InputEl >
                  <InputLableEl>
                    <InputLable>عنوان</InputLable>
@@ -243,20 +259,6 @@ const customStyleTextArea = ()=>{
                 </InputEl>
 
 
-                <InputEl >
-                 <InputLableEl>
-                   <InputLable> کدرنگ  </InputLable>
-                   
-                   <InputLableNecessary>*</InputLableNecessary>
-                 </InputLableEl>
-                 <CustomInput 
-                   name="value"
-                   handleChange={formik.handleChange}
-                   placeholder="کدرنگ   ..."
-                   customStyle={customInputStyle()} formik={formik}
-                 />
-                </InputEl>
-
 
                 <ButtomDivEl>
                   <ButtonEl  >
@@ -266,9 +268,9 @@ const customStyleTextArea = ()=>{
                      : 
                    <>
                       {
-                    path_type=="add"?"افزودن رنگ":"ویرایش رنگ"
+                    path_type=="add"?"افزودن ویژگی محصول":"ویرایش ویژگی محصول"
                   }
-                   </>
+                   </>م
                    }
                   
                   </ButtonEl>
@@ -279,7 +281,7 @@ const customStyleTextArea = ()=>{
                
             </ContentEl>
                }
-        </ColorPageEl>
+        </ProductFeaturePageEl>
     );
 }
-export default connect()(ColorPage);
+export default connect()(ProductFeaturePage);

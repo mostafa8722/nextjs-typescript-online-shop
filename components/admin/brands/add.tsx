@@ -7,8 +7,8 @@ import CustomInput from "../../../app/input/customInput";
 import CustomSelectInput from "../../../app/input/customSelectInput";
 
 
-import { validationColor } from "../../../logic/validations/adminValidations";
-import { adminColors,addColor,updateColor,adminColorRequest } from "../../../api/admin/color";
+import { validationBrand } from "../../../logic/validations/adminValidations";
+import { adminBrands,addBrand,updateBrand,adminBrandRequest } from "../../../api/admin/brand";
 
 
 import CircularProgress from '@mui/material/CircularProgress';
@@ -23,7 +23,7 @@ import { loadingPage } from "../../../store/actions/general";
 
 
 
-const ColorPageEl = styled("section")(()=>`
+const BrandPageEl = styled("section")(()=>`
 
   display:grid;
   grid-template-columns : 1fr 3fr;
@@ -47,7 +47,7 @@ overflow:hidden;
 `)
 const Title = styled("h4")<{}>(()=>`
 font-size:0.9rem;
-color:#565656;
+brand:#565656;
 font-weight:bold;
 margin : 1.2em 1rem;
 `);
@@ -62,21 +62,21 @@ const InputLableEl =  styled("div")(()=>`
 display:flex;
 `) 
 const InputLable =  styled("label")(()=>`
-color:green;
+brand:green;
 font-size:0.75rem;
 margin-bottom:0.4rem;
 font-weight:bold;
 margin-left:0.3rem;
 `) 
 const InputLableNecessary =  styled("span")(()=>`
-color:red;
+brand:red;
 font-size:0.75rem;
 margin-bottom:0.4rem;
 font-weight:bold;
 `) 
 
 const CircularProgressEl = styled(CircularProgress)(()=>`
-color:#ffffff!important;
+brand:#ffffff!important;
 width:30px!important;
 height:30px!important;
 
@@ -91,8 +91,8 @@ font-size : 1rem;
 font-weight:bold;
  width: 200px;
  border-radius:5px;
- background-color:green;
- color:#ffffff;
+ background-brand:green;
+ brand:#ffffff;
  height:40px;
  margin:40px 20px 30px 20px;
  line-height:40px;
@@ -104,21 +104,21 @@ font-weight:bold;
 
 
 
-const ColorPage = ()=>{
+const BrandPage = ()=>{
 
   const dispatch = useDispatch();
 
   const  isLoading = useSelector((state:any) => state.generalReducer.isLoading);
   const  isLoadingPage = useSelector((state:any) => state.generalReducer.isLoadingPage);
   const  isDataSuccess = useSelector((state:any) => state.generalReducer.isDataSuccess);
-  const  color= useSelector((state:any) => state.colorReducer.color);
-  const  colors= useSelector((state:any) => state.colorReducer.colors);
+  const  brand= useSelector((state:any) => state.brandReducer.brand);
+
 
 
 
   const router = useRouter();
   const pathname = useRouter().pathname;
-  const path_type = useRouter().pathname=="/hamyar-web/admin/colors/add"?"add":"edit";
+  const path_type = useRouter().pathname=="/hamyar-web/admin/brands/add"?"add":"edit";
 
   
 
@@ -137,7 +137,7 @@ const ColorPage = ()=>{
  
    dispatch(loadingPage(false))
     if(router.query.id)
-    adminColorRequest(dispatch,router.query.id)
+    adminBrandRequest(dispatch,router.query.id)
       
    
   },[router.isReady])
@@ -152,8 +152,8 @@ const ColorPage = ()=>{
     enableReinitialize :true,
     initialValues: {
 
-        title: color?color.title:'',
-        value: color?color.value:'',
+        title: brand?brand.title:'',
+     
        
         
        
@@ -161,7 +161,7 @@ const ColorPage = ()=>{
 
 
     },
-    validationSchema: validationColor,
+    validationSchema: validationBrand,
     onSubmit: (values,{ resetForm }) => {
 
     
@@ -169,14 +169,14 @@ const ColorPage = ()=>{
          let data:any = {
           id:router.query?router.query.id:0,
           title:values.title,
-          value:values.value,
+        
       
          }; 
          if(!isLoading){
           if(router.query.id)
-          updateColor(dispatch,data);
+          updateBrand(dispatch,data);
           else
-          addColor(dispatch,data);
+          addBrand(dispatch,data);
          }
         
 
@@ -205,14 +205,9 @@ const customInputStyle= (width?:number)=>{
 
 
 
-
-const customStyleTextArea = ()=>{
-  return { width: "100%",border:"0.1rem solid #eee",outline:"none",borderRadius:"5px",padding:"5px 10px" };
-}
-
  
     return (
-        <ColorPageEl>
+        <BrandPageEl>
               <SideBar />
                {
                 isLoadingPage?
@@ -221,7 +216,7 @@ const customStyleTextArea = ()=>{
                 <ContentEl>
                 <Title>
                   {
-                    path_type=="add"?"افزودن رنگ":"ویرایش رنگ"
+                    path_type=="add"?"افزودن برند":"ویرایش برند"
                   }
                   
                 </Title> 
@@ -243,19 +238,7 @@ const customStyleTextArea = ()=>{
                 </InputEl>
 
 
-                <InputEl >
-                 <InputLableEl>
-                   <InputLable> کدرنگ  </InputLable>
-                   
-                   <InputLableNecessary>*</InputLableNecessary>
-                 </InputLableEl>
-                 <CustomInput 
-                   name="value"
-                   handleChange={formik.handleChange}
-                   placeholder="کدرنگ   ..."
-                   customStyle={customInputStyle()} formik={formik}
-                 />
-                </InputEl>
+              
 
 
                 <ButtomDivEl>
@@ -266,7 +249,7 @@ const customStyleTextArea = ()=>{
                      : 
                    <>
                       {
-                    path_type=="add"?"افزودن رنگ":"ویرایش رنگ"
+                    path_type=="add"?"افزودن برند":"ویرایش برند"
                   }
                    </>
                    }
@@ -279,7 +262,7 @@ const customStyleTextArea = ()=>{
                
             </ContentEl>
                }
-        </ColorPageEl>
+        </BrandPageEl>
     );
 }
-export default connect()(ColorPage);
+export default connect()(BrandPage);

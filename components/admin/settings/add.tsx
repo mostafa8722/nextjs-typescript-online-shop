@@ -7,8 +7,8 @@ import CustomInput from "../../../app/input/customInput";
 import CustomSelectInput from "../../../app/input/customSelectInput";
 
 
-import { validationColor } from "../../../logic/validations/adminValidations";
-import { adminColors,addColor,updateColor,adminColorRequest } from "../../../api/admin/color";
+import { validationSetting } from "../../../logic/validations/adminValidations";
+import { adminSettings,addSetting,updateSetting,adminSettingRequest } from "../../../api/admin/setting";
 
 
 import CircularProgress from '@mui/material/CircularProgress';
@@ -23,7 +23,7 @@ import { loadingPage } from "../../../store/actions/general";
 
 
 
-const ColorPageEl = styled("section")(()=>`
+const SettingPageEl = styled("section")(()=>`
 
   display:grid;
   grid-template-columns : 1fr 3fr;
@@ -47,7 +47,7 @@ overflow:hidden;
 `)
 const Title = styled("h4")<{}>(()=>`
 font-size:0.9rem;
-color:#565656;
+setting:#565656;
 font-weight:bold;
 margin : 1.2em 1rem;
 `);
@@ -62,21 +62,21 @@ const InputLableEl =  styled("div")(()=>`
 display:flex;
 `) 
 const InputLable =  styled("label")(()=>`
-color:green;
+setting:green;
 font-size:0.75rem;
 margin-bottom:0.4rem;
 font-weight:bold;
 margin-left:0.3rem;
 `) 
 const InputLableNecessary =  styled("span")(()=>`
-color:red;
+setting:red;
 font-size:0.75rem;
 margin-bottom:0.4rem;
 font-weight:bold;
 `) 
 
 const CircularProgressEl = styled(CircularProgress)(()=>`
-color:#ffffff!important;
+setting:#ffffff!important;
 width:30px!important;
 height:30px!important;
 
@@ -91,8 +91,8 @@ font-size : 1rem;
 font-weight:bold;
  width: 200px;
  border-radius:5px;
- background-color:green;
- color:#ffffff;
+ background-setting:green;
+ setting:#ffffff;
  height:40px;
  margin:40px 20px 30px 20px;
  line-height:40px;
@@ -104,21 +104,21 @@ font-weight:bold;
 
 
 
-const ColorPage = ()=>{
+const SettingPage = ()=>{
 
   const dispatch = useDispatch();
 
   const  isLoading = useSelector((state:any) => state.generalReducer.isLoading);
   const  isLoadingPage = useSelector((state:any) => state.generalReducer.isLoadingPage);
   const  isDataSuccess = useSelector((state:any) => state.generalReducer.isDataSuccess);
-  const  color= useSelector((state:any) => state.colorReducer.color);
-  const  colors= useSelector((state:any) => state.colorReducer.colors);
+  const  setting= useSelector((state:any) => state.settingReducer.setting);
+  const  settings= useSelector((state:any) => state.settingReducer.settings);
 
 
 
   const router = useRouter();
   const pathname = useRouter().pathname;
-  const path_type = useRouter().pathname=="/hamyar-web/admin/colors/add"?"add":"edit";
+  const path_type = useRouter().pathname=="/hamyar-web/admin/settings/add"?"add":"edit";
 
   
 
@@ -137,7 +137,7 @@ const ColorPage = ()=>{
  
    dispatch(loadingPage(false))
     if(router.query.id)
-    adminColorRequest(dispatch,router.query.id)
+    adminSettingRequest(dispatch,router.query.id)
       
    
   },[router.isReady])
@@ -152,8 +152,8 @@ const ColorPage = ()=>{
     enableReinitialize :true,
     initialValues: {
 
-        title: color?color.title:'',
-        value: color?color.value:'',
+        title: setting?setting.title:'',
+        value: setting?setting.value:'',
        
         
        
@@ -161,7 +161,7 @@ const ColorPage = ()=>{
 
 
     },
-    validationSchema: validationColor,
+    validationSchema: validationSetting,
     onSubmit: (values,{ resetForm }) => {
 
     
@@ -174,9 +174,9 @@ const ColorPage = ()=>{
          }; 
          if(!isLoading){
           if(router.query.id)
-          updateColor(dispatch,data);
+          updateSetting(dispatch,data);
           else
-          addColor(dispatch,data);
+          addSetting(dispatch,data);
          }
         
 
@@ -212,7 +212,7 @@ const customStyleTextArea = ()=>{
 
  
     return (
-        <ColorPageEl>
+        <SettingPageEl>
               <SideBar />
                {
                 isLoadingPage?
@@ -279,7 +279,7 @@ const customStyleTextArea = ()=>{
                
             </ContentEl>
                }
-        </ColorPageEl>
+        </SettingPageEl>
     );
 }
-export default connect()(ColorPage);
+export default connect()(SettingPage);

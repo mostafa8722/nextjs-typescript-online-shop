@@ -63,6 +63,23 @@ export enum colorActionType {
     COLOR= "COLOR",
 }
 
+export enum brandActionType {
+    ADD_BRAND = "ADD_BRAND",
+    UPDATE_BRAND = "UPDATE_BRAND",
+    DELETE_BRAND = "DELETE_BRAND",
+    ADMIN_BRANDS = "ADMIN_BRANDS",
+    USER_BRANDS= "USER_BRANDS",
+    BRAND= "BRAND",
+}
+export enum settingActionType {
+    ADD_SETTING = "ADD_SETTING",
+    UPDATE_SETTING = "UPDATE_SETTING",
+    DELETE_SETTING = "DELETE_SETTING",
+    ADMIN_SETTINGS = "ADMIN_SETTINGS",
+    USER_SETTINGS= "USER_SETTINGS",
+    SETTING= "SETTING",
+}
+
 export enum roleActionType {
     ADD_ROLE = "ADD_ROLE",
     UPDATE_ROLE = "UPDATE_ROLE",

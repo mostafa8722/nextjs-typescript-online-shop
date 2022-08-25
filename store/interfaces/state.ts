@@ -1,4 +1,4 @@
-import {bannerInfo, cartInfo,categoryInfo,colorInfo,commentInfo, orderInfo,permissionInfo,productDetailInfo,productFeatureInfo,productInfo,roleInfo,sizeInfo,userInfo} from "./info"
+import {bannerInfo, BrandInfo, cartInfo,categoryInfo,colorInfo,commentInfo, orderInfo,permissionInfo,productDetailInfo,productFeatureInfo,productInfo,roleInfo,settingInfo,sizeInfo,userInfo} from "./info"
 
 //1
 export interface cartState {
@@ -56,6 +56,16 @@ export interface productDetailState {
 export interface productFeatureState {
     feature:  productFeatureInfo | {},
     features:  productFeatureInfo[] | [],
+}
+
+
+export interface settingState {
+    setting:  settingInfo | {},
+    settings:  settingInfo[] | [],
+}
+export interface brandState {
+    brand:  BrandInfo | {},
+    brands:  BrandInfo[] | [],
 }
 export  interface userState {
     user:  userInfo | {},
