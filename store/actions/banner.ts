@@ -32,7 +32,7 @@ export const add = (payload: bannerInfo): banner.add => {
 
 
   
-  export const loadbanner = (payload: bannerInfo): banner.loadBanner => {
+  export const loadBanner = (payload: bannerInfo): banner.loadBanner => {
 
     return { type: bannerActionType.BANNER , payload }
   }

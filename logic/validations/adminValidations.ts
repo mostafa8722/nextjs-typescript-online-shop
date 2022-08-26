@@ -66,3 +66,13 @@ export   const validationBrand= yup.object().shape({
      
 
 });
+
+export   const validationBanner = yup.object().shape({
+    title: yup
+        .string()
+        .min(3, 'تعداد حروف وارد شده کمتر از حد مجاز می باشد ')
+        .max(50, 'تعداد حروف وارد شده بیش از حد مجاز می باشد ')
+        .required('عنوان الزامی  می باشد'),
+     
+
+});

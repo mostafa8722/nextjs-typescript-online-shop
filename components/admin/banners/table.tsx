@@ -261,8 +261,7 @@ cursor:pointer;
 const EnhancedTableToolbar = (props: EnhancedTableToolbarProps) => {
   const { numSelected } = props;
 
-
-
+ 
   return (
     <Toolbar
       sx={{
@@ -290,7 +289,6 @@ const EnhancedTableToolbar = (props: EnhancedTableToolbarProps) => {
           id="tableTitle"
      
         >
-      
          دسته بندی ها
         </h4>
       )}
@@ -310,7 +308,7 @@ const EnhancedTableToolbar = (props: EnhancedTableToolbarProps) => {
     </Toolbar>
   );
 };
-import {AppContext} from "./all"
+
 
 const EnhancedTable = (props:any)=>{
   const {handleRemoveItem} = props;
@@ -322,7 +320,7 @@ const EnhancedTable = (props:any)=>{
     const [rowsPerPage, setRowsPerPage] = React.useState(5);
     const rows = useSelector((state:any) => state.categoryReducer.categories.map((item:any,index:number)=>createData(item.id,index+1,item.title,item.body,item.image,item.parent,"")));
 
-  
+   
   
     const handleRequestSort = (
       event: React.MouseEvent<unknown>,
@@ -380,8 +378,7 @@ const EnhancedTable = (props:any)=>{
   
     const emptyRows =
       page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
-      
-      
+  
     return (
       <Box sx={{ width: '100%' }}>
         <Paper sx={{ width: '100%', mb: 2 }}>

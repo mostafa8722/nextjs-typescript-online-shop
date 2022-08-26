@@ -31,7 +31,7 @@ const sizeReducer = (state:sizeState=initialSizeState,action :Action):sizeState=
                     return tempsize;
                     break;
 
-            case sizeActionType.size:
+            case sizeActionType.SIZE:
             tempsize.loadsize(action.payload)
             return tempsize;
             break;

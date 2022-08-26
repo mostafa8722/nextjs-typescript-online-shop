@@ -2,7 +2,7 @@ import { styled } from "@mui/system";
 import SideBar from "../sidebar";
 import EnhancedTable from "./table"
 
-import React, { useEffect, useState,createContext } from "react";
+import { useEffect, useState } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 import { adminCategories,adminDeleteCategory } from "../../../api/admin/category";
@@ -10,7 +10,6 @@ import CustomDeleteDialog from "../../../app/alertDialog/cutstomDeleteDialog";
 import { categoryActionType } from "../../../store/actionTypes/actions";
 import { categoryInfo } from "../../../store/interfaces/info";
 import CustomAlert from "../../../app/customAlert";
-
 
 
 
@@ -36,6 +35,7 @@ overflow:hidden;
 
 
 `)
+
 
 const CatPage = ()=>{
 
@@ -72,10 +72,7 @@ const CatPage = ()=>{
   let alertInfo = {
     text :"آیا از حذف این دسته اطمینان دارید؟"
   }
-  
-
     return (
-    
         <CatPageEl>
               <SideBar />
              <ContentEl>
@@ -85,7 +82,6 @@ const CatPage = ()=>{
              <CustomDeleteDialog alertInfo={alertInfo} handleClose={(e:boolean)=>handleConfirmRemove(e)} open={openDailog} />
               <CustomAlert />
         </CatPageEl>
-    
     );
 }
 export default CatPage;

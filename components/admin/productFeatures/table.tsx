@@ -110,7 +110,7 @@ interface HeadCell {
 }
 
 const headCells: readonly HeadCell[] = [
-    {
+     {
         id: 'row',
         numeric: true,
         sort:false,

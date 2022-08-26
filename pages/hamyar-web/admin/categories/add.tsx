@@ -1,8 +1,10 @@
 import Cat from "../../../../components/admin/categories/add";
 
 const AddCat = ()=>{
+
+    
     return(
-        <Cat/>
+        <Cat />
     )
 }
 export default AddCat;
