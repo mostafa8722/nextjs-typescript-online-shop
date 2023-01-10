@@ -8,7 +8,7 @@ import {makeStyles} from "@mui/styles"
 const SlidersEl = styled("div")(()=>`
 
 height:400px;
-border-radius:0.6rem;
+ border-radius:0.6rem;
 margin:0.5rem 0rem;
 background:#9f9e8a;
 box-shadow :1px 2px 1px rgba(0,0,0,0.3);
@@ -47,7 +47,7 @@ const Sliders = ()=>{
                 color: "#1f1f1f"
             },
             '&:active': {
-                color: "#1f1f1f"
+                color: "#ff2200"
             }
         },
         indicatorIcon: {

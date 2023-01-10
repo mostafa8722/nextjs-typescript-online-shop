@@ -1,14 +1,15 @@
-import { styled } from "@mui/system";
-import CustomImageViewer from "../../../app/customImageViewer";
-import { AiFillStar } from 'react-icons/ai';
+import { styled } from "@mui/system"
+import CustomImageViewer from "../../../app/customImageViewer"
+import { AiFillStar } from "react-icons/ai"
 interface Props {
-    id:number,
-    title:string,
-    image:string,
-    price:number,
-    discount:number
+	id: number
+	title: string
+	image: string
+	price: number
+	discount: number
 }
-const ProductEl = styled("div")(()=>`
+const ProductEl = styled("div")(
+	() => `
  display:flex;
  flex-direction:column;
  align-items:center;
@@ -24,47 +25,61 @@ const ProductEl = styled("div")(()=>`
    
 };
 
-`) 
-const CustomImageViewerEl = styled(CustomImageViewer)(()=>`
+`
+)
+const CustomImageViewerEl = styled(CustomImageViewer)(
+	() => `
 height:150px;
 width:100%;
-`)
+`
+)
 
-const TitleEl = styled("h3")(()=>`
+const TitleEl = styled("h3")(
+	() => `
 font-size:0.85rem;
 font-weight:bold;
 padding:0rem 0.5rem;
 height:50px;
 
-`) 
-const RatingEl = styled("div")(()=>`
+`
+)
+const RatingEl = styled("div")(
+	() => `
 display:flex;
 flex-direction:row-reverse;
 padding:0rem 1rem;
 width:100%;
-`) 
-const RateNumberEl = styled("span")(()=>`
+`
+)
+const RateNumberEl = styled("span")(
+	() => `
 font-size:0.9rem;
   color:#343434;
   margin-left:0.2rem;
   font-family: 'vazir FaNum'!important;
 
-`) 
+`
+)
 
-const RateIconEl = styled(AiFillStar)(()=>`
+const RateIconEl = styled(AiFillStar)(
+	() => `
 font-size:1rem;
   color:#f9bc00;
 
-`) 
+`
+)
 
-const PriceSectionEl = styled("div")(()=>`
+const PriceSectionEl = styled("div")(
+	() => `
 display:flex;
 justify-content:space-between;
 margin:1rem 1rem;
 padding:0rem 1rem;
 width:100%;
-`) 
-const DiscountEl = styled("span")(()=>`
+`
+)
+const DiscountEl = styled("span")(
+	() => `
 display:flex;
 justify-content:center;
 align-items:center;
@@ -75,13 +90,17 @@ border-radius:0.9rem;
 font-size:0.8rem;
 font-family: 'vazir FaNum'!important;
 
-`) 
-const PriceEl = styled("span")(()=>`
+`
+)
+const PriceEl = styled("span")(
+	() => `
 color:#343434;
 font-size:1rem;
 font-family: 'vazir FaNum'!important;
-`) 
-const PriceLineTroughEl = styled("span")(()=>`
+`
+)
+const PriceLineTroughEl = styled("span")(
+	() => `
 color:#787878;
 font-size:0.8rem;
 font-family: 'vazir FaNum'!important;
@@ -91,30 +110,31 @@ width:100%;
 padding-left:1rem ;
 text-decoration: line-through;
 margin-bottom:1rem;
-`) 
+`
+)
 
-const Product = (props:Props)=>{
-    const {id,title,image,price,discount} = props;
-    const formatPrice = (price:number)=>  Number(price).toLocaleString()+" "+"تومان";
+const Product = (props: Props) => {
+	const { id, title, image, price, discount } = props
+	const formatPrice = (price: number) =>
+		Number(price).toLocaleString() + " " + "تومان"
 
-    return (
-
-        <>
-        <ProductEl >
-            <CustomImageViewerEl src={image} />
-            <TitleEl>{title}</TitleEl>
-            <RatingEl>
-               <RateIconEl/>
-               <RateNumberEl >3</RateNumberEl>
-            </RatingEl>
-            <PriceSectionEl>
-              <DiscountEl>{discount}%</DiscountEl>
-              <PriceEl>{formatPrice(price)}</PriceEl>
-            </PriceSectionEl>
-            <PriceLineTroughEl>{formatPrice(price)}</PriceLineTroughEl>
-        </ProductEl>
-        </>
-    )
+	return (
+		<>
+			<ProductEl>
+				<CustomImageViewerEl src={image} />
+				<TitleEl>{title}</TitleEl>
+				<RatingEl>
+					<RateIconEl />
+					<RateNumberEl>3</RateNumberEl>
+				</RatingEl>
+				<PriceSectionEl>
+					<DiscountEl>{discount}%</DiscountEl>
+					<PriceEl>{formatPrice(price)}</PriceEl>
+				</PriceSectionEl>
+				<PriceLineTroughEl>{formatPrice(price)}</PriceLineTroughEl>
+			</ProductEl>
+		</>
+	)
 }
 
-export default Product;
+export default Product

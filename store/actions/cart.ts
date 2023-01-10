@@ -4,6 +4,6 @@ import {cartActionType } from '../actionTypes/actions';
 
 
 export const add = (payload: cartInfo): cart.add => {
-    console.log("tt",payload)
+   
     return { type: cartActionType.ADD_CART , payload }
   }

@@ -4,7 +4,7 @@ import SlidersProduct from "./sliders";
 
 interface Props {
     title:string;
-}
+      }
   const ProductsEl = styled("div")(()=>`
      display:flex;
      flex-direction:column;
@@ -12,6 +12,7 @@ interface Props {
      height:400px;
   
   `)
+  
   const SectionTopEl = styled("div")(()=>`
   display:flex;
   margin-top:1rem;

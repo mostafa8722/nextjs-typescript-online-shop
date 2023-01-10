@@ -1,8 +1,6 @@
-import Setting from "../../../../../components/admin/settings/add";
+import Setting from "../../../../../components/admin/settings/add"
 
-const AddSetting = ()=>{
-    return(
-        <Setting/>
-    )
+const AddSetting = () => {
+	return <Setting />
 }
-export default AddSetting;
+export default AddSetting

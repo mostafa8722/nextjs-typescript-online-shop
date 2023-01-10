@@ -1,7 +1,5 @@
-import ProductFeaturePage from "../../../../components/admin/productFeatures/all";
-const ProductFeatures = ()=>{
-return (
-    <ProductFeaturePage />
-)
+import ProductFeaturePage from "../../../../components/admin/productFeatures/all"
+const ProductFeatures = () => {
+	return <ProductFeaturePage />
 }
-export default ProductFeatures;
+export default ProductFeatures

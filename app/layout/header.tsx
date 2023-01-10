@@ -4,7 +4,6 @@ import * as React from "react";
 import {styled} from "@mui/system"
 
 import useMediaQuery from "@mui/material/useMediaQuery";
-import {Devices} from "../../logic/Theme"
 import { useTheme } from '@mui/material/styles';
 import ContainerTop  from "./header/containerTop";
 import ContainerSearch  from "./header/containerSearch";
